@@ -92,7 +92,15 @@ header .row {
 }
 
 .main-menu:target + .backdrop {
-
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.85);
+    cursor: default;
 }
 
 
@@ -127,6 +135,48 @@ nav a {
         border-bottom: 1px solid #dddddd;
         padding: 0.3rem 0;
     }
+
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    .main-menu {
+        position: static;
+        display: block;
+    }
+
+    .main-menu ul {
+        padding: 0;
+        width: auto;
+        height: auto;
+        background: none;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .main-menu li:first-child a {
+        border-top: none;
+    }
+
+    .main-menu a {
+        color: #C85028;
+        border-bottom: none;
+        display: inline;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: none;
+        color: #7e64be;
+        text-decoration: none;
+    }
+
+
+
+
+
+
     nav ul {      
       text-align: center;
     }
