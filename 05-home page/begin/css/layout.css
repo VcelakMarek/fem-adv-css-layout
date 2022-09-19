@@ -1,5 +1,18 @@
 /* grid system -- mobile first! */
 
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    --columns: 16;
+}
+
+section {
+    --width: 16;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 16) * 100%);
+    --gap: calc((var(--columns, 16) - var(--width, 0)) * 1%);
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+  }
 
 
 
@@ -17,5 +30,18 @@
 
 }
 @media (min-width: 1200px) {
-    
+    /* #first - 5, #main - 6, #devs - 2, #resources - 3*/
+
+    #first{
+        --width: 5;
+    }
+    #main {
+        --width: 6;
+    }
+    #devs {
+        --width: 2;
+    }
+    #resources{
+        --width: 3;
+    }
 }
