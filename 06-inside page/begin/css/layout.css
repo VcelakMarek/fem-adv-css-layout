@@ -13,7 +13,8 @@ main {
   --columns: 16;
 }
 section,
-#devs li {
+#devs li,
+main > * {
     --width: 16;
     --gap-constant: 0.3%;
 	--initialbasis: calc(var(--width, 0) / var(--columns, 16) * 100%);
@@ -31,6 +32,13 @@ section,
     /* keep our math working, move 3rd and 4th columns to bottom */
     main {
         --columns: 11;
+       
+    }
+    main article {
+        --width: 7;
+    }
+    main aside {
+        --width: 4;
     }
     /* row 1: #first 5 - #main 6,
     row 2 #devs: 11,
@@ -88,6 +96,13 @@ section,
     }
     main {
         --columns: 16;
+       
+    }
+    main article {
+        --width: 12;
+    }
+    main aside {
+        --width: 4;
     }
     /* #first 5 - #main 6 - #devs 2 - #resources 3 cols wide, make sure ordering is correct */
     #devs{
