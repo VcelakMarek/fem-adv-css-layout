@@ -6,7 +6,6 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 
 
 
-
 /* basic table styling */
 table {
     border-collapse: collapse;
@@ -17,6 +16,79 @@ tr:nth-child(odd) {
 }
 th {
     text-align: left;
+}
+th, td {
+    padding: 1rem;
+}
+
+
+td:nth-of-type(1)::before {
+    content: "Planet Name: "
+}
+td:nth-of-type(2)::before {
+    content: "Mass (10<sup>24</sup>kg): "
+}
+td:nth-of-type(3)::before {
+    content: "Diameter (km):"
+}
+td:nth-of-type(4)::before {
+    content: "Rotation Period (hours): "
+}
+td:nth-of-type(5)::before {
+    content: "Length of Day (hours): "
+}
+td:nth-of-type(6)::before {
+    content: "Distance from Sun (10<sup>6</sup>km): "
+}
+td:nth-of-type(7)::before {
+    content: "Orbital Period (days): "
+}
+td:nth-of-type(8)::before {
+    content: "Mean Temperature (C):"
+}
+td:nth-of-type(9)::before {
+    content: "Number of Moons: "
+}
+td:nth-of-type(10)::before {
+    content: "Ring system?: "
+}
+td:nth-of-type(11)::before {
+    content: "Blobal Magnetic Field: "
+}
+
+caption {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    margin: 1rem auto;
+    display:  block;
+    padding-left: 1rem;
+  }
+
+/* responsive table styling*/
+
+.tablescrool {
+    overflow-x: auto;
+}
+table, thead, tbody, th, tr {
+    display: block;
+}
+td {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+td::before {
+    white-space: nowrap;
+    font-weight: bold;
+    flex-basis: 50%;
+    padding: 0.1rem;
+}
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 
@@ -30,7 +102,27 @@ aside li {
     margin-bottom: 1rem;
 }
 
+@media (min-width: 950px) {
+    thead, tbody {
+        display: table-row-group;
+    }
+    thead, tr {
+        position: static;
+    }
+    th, td {
+        display: table-cell;
+        text-align: left;
+    }
+    tr {
+        display: table-row;
+    }
+    table {
+        display: table;
+    }
+    td:nth-child(n)::before {
+        content: "";
+    }
+}
 
- 
 
 
