@@ -53,3 +53,38 @@ button {
 button:hover {
 	background-color: #9A2B27;
 }
+
+@media (min-width:1200px){
+	.flex {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	legend .flex{
+		flex-flow: column wrap;
+	}
+	.flex label{
+		flex-basis: 30%;
+	}
+	.flex input{
+		flex-basis: 70%;
+	}
+	.item1{
+		flex-basis: 30%;
+	}
+	.item2{
+		flex-basis: 70%;
+	}
+	p, [for="rating"] {
+		margin-top: 0;
+	}
+	.new-line {
+		display: block;
+	}
+	.rating {
+		padding-top: 2rem;
+	}
+	[for="comments"] {
+		margin-top: 1.2rem;
+	}
+
+}
