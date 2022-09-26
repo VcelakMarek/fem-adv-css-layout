@@ -26,6 +26,10 @@ section,
     --width: 1;
     --gap-constant: 3%;
 }
+#inside article,
+#inside aside {
+    --columns: 1;
+}
 
 
 /* tablet display - change columns to 11, place rows 3 and 4 on the bottom, full width */
@@ -67,9 +71,11 @@ section,
         margin: 0 0 1rem 1rem;
     }
     #inside article {
+        --columns: 11;
         --width: 7;
     }
     #inside aside {
+        --columns: 11;
         --width: 4;
     }
 }
@@ -90,9 +96,11 @@ section,
         order: 3;
     }
     #inside article {
+        --columns: 14;
         --width: 10;
     }
     #inside aside {
+        --columns: 14;
         --width: 4;
     }
     #inside #table article {
@@ -117,6 +125,10 @@ section,
     #resources {
         --width: 3;
         order: 4;
+    }
+    #inside article,
+    #inside aside {
+        --columns: 16;
     }
     #inside article,
     #inside #table article {
