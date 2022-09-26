@@ -52,17 +52,25 @@
 		<form>
 			<fieldset>
                 <legend>Your contact information</legend>
+                <div class="flex">
                     <label for="name">Your name </label>
-                        <input type="text" id="name" autofocus>
+                    <input type="text" id="name" autofocus>
+                </div>
+                <div class="flex">
                     <label for="phone">Phone number</label>
                         <input type="tel" id="phone" placeholder="Don't forget the area code!">
+                </div>
+                <div class="flex">
                     <label for="email">Email</label>
-                        <input type="email" id="email">
+                    <input type="email" id="email">
+                </div>
 			</fieldset>
+                
 			<fieldset>
 				<legend>About your resource </legend>
-                    <p>What kind of resource is it?</p>
-                    <div>
+                    <div class="flex ">
+                        <p class="item1">What kind of resource is it?</p>
+                    <div class="item2">
                         <label>
                             <input type="radio" name="resource" value="written" checked> Written article 
                         </label>
@@ -78,9 +86,11 @@
                         <label>
                             <input type="radio" name="resource" value="other"> Some other type
                         </label>
-
-					<label for="rating">How would you rate this resource?</label>
-						<select id="rating">
+                    </div>
+                    </div>
+                    <div class="flex rating">
+                        <label class="item1" for="rating">How would you rate this <span class="new-line"> resource?</span></label>
+						<select  class="item2" id="rating">
 							<option selected>Select one...</option>
 							<option value="5star">Amazing, 5 stars</option>
 							<option value="4star">Helpful, 4 stars</option>
@@ -88,11 +98,14 @@
                             <option value="2star">Avoid if you can, 2 stars</option>
                             <option value="1star">Pitiful, 1 star</option>
                         </select>
-					<label for="comments">Other details or comments:</label>
-						<textarea id="comments"></textarea>
-					<label>
+                    </div>
+                    <div class="flex item1">
+					    <label for="comments">Other details or comments:</label>
+						    <textarea class="item2" id="comments"></textarea>
+                    </div>
+                    <div>
 						<input id="subscribe" type="checkbox" value="subscribe">Add me to your email list
-					</label>				
+					</div>				
 
 					<button type="submit">Submit</button>
 				</fieldset>
